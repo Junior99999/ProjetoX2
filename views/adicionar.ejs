@@ -1,0 +1,11 @@
+<%-include('cabecalho.ejs')%>
+    <center>
+    <form method="POST">
+        Nome: <input type="text" name="nome" placeholder="Nome"><br>
+        Código de Barra: <input type="text" name="CodBarra" placeholder="Código de Barras"><br>
+        Preço: <input type="text" name="preco" placeholder="Preço"><br>
+        <input type="submit" value="Adicionar">
+    </form>
+    <h3><%=msg%></h3>
+    </center>
+<%-include('rodape.ejs')%>  

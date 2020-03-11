@@ -1,0 +1,39 @@
+<%-include('cabecalho.ejs')%>
+    <center>
+        <div id="DivBody">
+        <form method="POST">
+            <input type="text" name="pesquisa" placeholder="Pesquisar">
+            <input type="submit" value="Pesquisar">
+        </form>
+        <table>
+            <tr>
+                <th>Id</th>
+                <th>Nome</th>
+                <th>Codigo de Barra</th>
+                <th>Preço</th>
+                <th>Edita</th>
+                <th>Deleta</th>
+            </tr>
+            <% listaProdutos.forEach(function(produto){{%>
+                <tr>
+                        <th> <%=produto._id%> </th>
+                        <th> <%=produto.nome%> </th>
+                        <th> <%=produto.CodBarra%> </th>
+                        <th> <%=produto.preco%> </th>
+                        <th>
+                            <a href="/editar/<%=produto._id%>">
+                                <img src="lapiscss.png" alt="Icone de Editar" id="Edit" style="width: 25px;">
+                            </a>
+                        </th>  
+                        <th>
+                            <a href="/del/<%=produto._id%>">
+                               <img src="lixeiracss.png" alt="Icone de Deletar" id="Deleta" style="width: 25px;">
+                            </a>
+                        </th>
+                </tr>
+            <% }}) %>
+        </table>
+        <h2> <%=msg%> </h2>
+    </div>
+    </center>
+<%-include('rodape.ejs')%>

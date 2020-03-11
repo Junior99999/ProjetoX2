@@ -1,0 +1,13 @@
+<%-include('cabecalho.ejs')%>
+    <center>
+    <h1>Editando Produtos</h1>
+    <form method="POST">
+        Id: <input type="text" name="id" readonly value="<%=produto._id%>"><br>
+        Nome: <input type="text" name="nome" placeholder="Nome" value="<%=produto.nome%>"> <br>
+        Código de Barra: <input type="text" name="CodBarra" placeholder="Código" value="<%=produto.CodBarra%>"><br>
+        Preço: <input type="text" name="preco" placeholder="Preço" value="<%=produto.preco%>"> <br>
+        <input type="submit">
+    </form>
+    </center>
+
+<%-include('rodape.ejs')%>
